@@ -65,11 +65,67 @@
 
 // console.log(person);
 
-var person = new Object();
+// var person = new Object();
 
-person.firstName = "John";
-person.lastName = "Doe";
-person.age = 50;
-person.eyeColor = "blue";
+// person.firstName = "John";
+// person.lastName = "Doe";
+// person.age = 50;
+// person.eyeColor = "blue";
 
-console.log(person);
+// console.log(person);
+
+// JS Object Properties: 
+
+// var person = {
+//     firstName : "John",
+//     lastName : "Doe",
+//     age : 50,
+//     eyeColor : "blue"
+// }
+
+//console.log(person.firstName + " is " + person.age + " years old.");
+//console.log(person["firstName"] + " is " + person["age"] + " years old.")
+
+// Adding Properties :
+
+//person.nationality = "English";
+
+//console.log(person);
+
+// Deleting Properties: 
+
+//delete person.lastName
+
+//console.log(person);
+
+// Nested Objects : 
+
+// var person = {
+//     firstName : "John",
+//     lastName : "Doe",
+//     age : 50,
+//     cars : {
+//         car1 : "Ford",
+//         car2 : "BMW",
+//         car3 : "Fiat"
+//     },
+//     eyeColor : "blue"
+// }
+
+// console.log(person);
+
+// Nested Arrays and Objects :
+
+const myObj = {
+    name : "John",
+    age : 30,
+    cars : [
+        {name : "Ford", models: ["Fiesta", "Focus", "Mustang"]},
+        {name : "BMW", models: ["320", "X3", "X5"]},
+        {name : "Fiat", models: ["500", "Panda"]}
+    ],
+    eyeColor : "blue"
+}
+
+console.log(myObj);
+console.log(typeof myObj);
