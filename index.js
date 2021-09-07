@@ -116,16 +116,29 @@
 
 // Nested Arrays and Objects :
 
-const myObj = {
-    name : "John",
-    age : 30,
-    cars : [
-        {name : "Ford", models: ["Fiesta", "Focus", "Mustang"]},
-        {name : "BMW", models: ["320", "X3", "X5"]},
-        {name : "Fiat", models: ["500", "Panda"]}
-    ],
-    eyeColor : "blue"
+// const myObj = {
+//     name : "John",
+//     age : 30,
+//     cars : [
+//         {name : "Ford", models: ["Fiesta", "Focus", "Mustang"]},
+//         {name : "BMW", models: ["320", "X3", "X5"]},
+//         {name : "Fiat", models: ["500", "Panda"]}
+//     ],
+//     eyeColor : "blue"
+// }
+
+// console.log(myObj);
+// console.log(typeof myObj);
+
+// JS Object Methods :
+
+var person = {
+    firstName : "John", 
+    lastName : "Doe", 
+    id : 5566,
+    fullName : function (){
+        return this.firstName + " " + this.lastName;
+    }
 }
 
-console.log(myObj);
-console.log(typeof myObj);
+console.log(person.fullName())
