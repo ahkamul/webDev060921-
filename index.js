@@ -1,6 +1,6 @@
 // Stack Learner YT 051 : JS Object Literal vs Constructor : 
 
-    // code written in index.js file in webDev300821 Repo
+// code written in index.js file in webDev300821 Repo
 
 
 // Stack Learner YT 053 : Accessing Object Properties in JS
@@ -132,13 +132,107 @@
 
 // JS Object Methods :
 
-var person = {
-    firstName : "John", 
-    lastName : "Doe", 
-    id : 5566,
-    fullName : function (){
-        return this.firstName + " " + this.lastName;
-    }
-}
+// var person = {
+//     firstName : "John", 
+//     lastName : "Doe", 
+//     id : 5566,
+//     fullName : function (){
+//         return this.firstName + " " + this.lastName;
+//     }
+// }
 
-console.log(person.fullName())
+// console.log(person.fullName())
+
+// Date : 08.09.2021
+
+// JS Display Object :
+
+// Ex. 1
+
+// const person = {
+//     name : "John",
+//     age : 30,
+//     city : "New York"
+// }
+
+// console.log(person);
+
+// Ex. 2 
+
+// const person = {
+//     name : "John",
+//     age : 30,
+//     city : "New York"
+// }
+// let txt = "";
+// for (let x in person){
+//     txt += person [x] + " ";
+// };
+
+// console.log(txt)
+
+// Ex. 3
+
+// const person = {
+//     name : "John",
+//     age : 30,
+//     city : "New York"
+// };
+
+// const myArray = Object.values(person);
+
+// console.log(myArray);
+
+// Ex. 4
+
+// const person = {
+//     name : "John",
+//     age : 30,
+//     city : "New York"
+// }
+
+// let myString = JSON.stringify(person)
+
+// console.log (myString)
+
+// Ex. 5
+
+// const person = {
+//     name : "John",
+//     age : 30,
+//     today : new Date ()
+// }
+
+// let myString = JSON.stringify(person);
+
+// console.log(myString)
+
+// Ex. 6
+
+// const person = {
+//     name: "John",
+//     age: function () { return 30; }
+// }
+// let myString = JSON.stringify(person)
+
+// console.log(myString)
+
+// Ex. 7
+
+// const person = {
+//     name : "John", 
+//     age : function(){return 30;}
+// }
+// person.age = person.age.toString()
+
+// let myString = JSON.stringify(person);
+
+// console.log(myString)
+
+// Ex. 8
+
+const arr = ["John", "Peter", "Sally", "Jane"]
+
+let myString = JSON.stringify(arr)
+
+console.log(myString)
