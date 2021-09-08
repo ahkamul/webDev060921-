@@ -231,8 +231,89 @@
 
 // Ex. 8
 
-const arr = ["John", "Peter", "Sally", "Jane"]
+// const arr = ["John", "Peter", "Sally", "Jane"]
 
-let myString = JSON.stringify(arr)
+// let myString = JSON.stringify(arr)
 
-console.log(myString)
+// console.log(myString)
+
+
+// JS Object Accessors
+
+// Ex. 1
+
+// const person = {
+//     firstName : "John",
+//     lastName : "Doe",
+//     language : "en",
+//     get lang (){
+//         return this.language;
+//     }
+// }
+// console.log(person.lang)  // using get 
+
+// Ex. 2
+
+// const person = {
+//     firstName : "John",
+//     lastName : "Doe",
+//     language : "en",
+//     set lang (lang){
+//         return this.language = lang;
+//     }
+// }
+// person.lang = "en"
+
+// console.log(person.language)
+
+// Ex. 3   Which one is preferable between below two: 
+
+// First 
+
+// const person = {
+//     firstName : "John",
+//     lastName : "Doe",
+//     fullName : function(){
+//         return this.firstName + " " + this.lastName;
+//     }
+// }
+// console.log(person.fullName())  // Access fullName as a function: person.fullName()
+
+// Second
+
+// const person = {
+//     firstName : "John",
+//     lastName : "Doe",
+//     get fullName (){
+//         return this.firstName + " " + this.lastName;
+//     }
+// }
+// console.log(person.fullName)  // Access fullName as a property:person.fullName
+
+
+// Ex. 4  Data Quality 
+
+// const person = {
+//     firstName : "John",
+//     lastName : "Doe", 
+//     language : "en",
+//     get lang (){
+//         return this.language.toUpperCase();
+//     }
+// }
+// console.log(person.lang)
+
+// Ex. 5
+
+const person = {
+    firstName : "John",
+    lastName : "Doe", 
+    language : "",
+    set lang (lang){
+        this.language = lang.toUpperCase();
+    }
+}
+person.lang = "en";
+
+console.log(person.language)
+
