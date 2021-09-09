@@ -348,18 +348,49 @@
 
 // Ex. 3    Adding a method to a Constructor :
 
-function Person (first, last, age, eyeColor){
+// function Person (first, last, age, eyeColor){
+//     this.firstName = first;
+//     this.lastName = last;
+//     this.age = age;
+//     this.eyeColor = eyeColor;
+//     this.name = function (){
+//         return this.firstName + " " + this.lastName
+//     };
+// }
+// const myFather = new Person ("John", "Doe", 50, "blue");
+
+// console.log("My father is " + myFather.name() + ".");
+
+
+// JS Object Prototypes :
+
+// Ex. 1 
+
+// function Person (first, last, age, eye){
+//     this.firstName = first;
+//     this.lastName = last;
+//     this.age = age;
+//     this.eyeColor = eye;
+// }
+// Person.prototype.nationality = "English";
+
+// const myFather = new Person ("John", "Doe", 50, "blue");
+
+// console.log("The nationality of my father is " + myFather.nationality + ".")
+
+
+// Ex. 2 
+
+function Person (first, last, age, eye){
     this.firstName = first;
     this.lastName = last;
     this.age = age;
-    this.eyeColor = eyeColor;
-    this.name = function (){
-        return this.firstName + " " + this.lastName
-    };
+    this.eyeColor = eye;
 }
+Person.prototype.name = function(){
+    return this.firstName + " " + this.lastName
+};
+
 const myFather = new Person ("John", "Doe", 50, "blue");
 
-console.log("My father is " + myFather.name() + ".");
-
-
-
+console.log("My Father is " + myFather.name() + ".")
