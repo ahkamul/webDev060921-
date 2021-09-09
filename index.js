@@ -305,15 +305,61 @@
 
 // Ex. 5
 
-const person = {
-    firstName : "John",
-    lastName : "Doe", 
-    language : "",
-    set lang (lang){
-        this.language = lang.toUpperCase();
-    }
-}
-person.lang = "en";
+// const person = {
+//     firstName : "John",
+//     lastName : "Doe", 
+//     language : "",
+//     set lang (lang){
+//         this.language = lang.toUpperCase();
+//     }
+// }
+// person.lang = "en";
 
-console.log(person.language)
+// console.log(person.language)
+
+// JS Object Constructor :
+
+// Ex. 1
+
+// function Person (first, last, age, eye){
+//     this.firstName = first;
+//     this.lastName = last;
+//     this.age = age;
+//     this.eyeColor = eye;
+// }
+// const myFather = new Person ("John", "Doe", 50, "blue");
+
+// console.log("My father is " + myFather.age + ".")
+
+// Ex. 2 
+
+// function Person (first, last, age, eye){
+//     this.firstName = first;
+//     this.lastName = last;
+//     this.age = age;
+//     this.eyeColor = eye;
+//     this.nationality = "English"
+// }
+
+// const myFather = new Person ("John", "Doe", 50, "blue");
+// const myMother = new Person ("Sally", "Rally", 48, "green");
+
+// console.log("My father is " + myFather.nationality + ". My mother is also " + myMother.nationality + ".");
+
+// Ex. 3    Adding a method to a Constructor :
+
+function Person (first, last, age, eyeColor){
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eyeColor;
+    this.name = function (){
+        return this.firstName + " " + this.lastName
+    };
+}
+const myFather = new Person ("John", "Doe", 50, "blue");
+
+console.log("My father is " + myFather.name() + ".");
+
+
 
